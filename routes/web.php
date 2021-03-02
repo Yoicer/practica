@@ -6,7 +6,7 @@ Route::get('/', function () {
     $nombre = "Luis";
     return view('home',compact('nombre')); // retorno de vista con variable
 
-});
+})->name('home');
 
 //   Secundaria
 Route::get('contacto', function () {
@@ -26,6 +26,8 @@ Route::get('contactonos', function(){
 // Manera de retornar vista con poca informaciion
 Route::view('/about', 'about')->name('about');
 Route::view('/contac', 'contac')->name('contac');
-Route::view('/portafolio', 'portafolio')->name('portafolio');
+
+
+Route::get('/portafolio', 'PortafolioController@index')->name('portafolio');
 
 
