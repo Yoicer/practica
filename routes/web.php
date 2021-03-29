@@ -27,7 +27,9 @@ Route::get('contactonos', function(){
 Route::view('/about', 'about')->name('about');
 Route::view('/contac', 'contac')->name('contac');
 
+Route::post('contac', 'MessagesController@store');
 
+//ruta de la vista portafolio con referencia a la funcion index del controlador
 Route::get('/portafolio', 'PortafolioController@index')->name('portafolio');
 
 
